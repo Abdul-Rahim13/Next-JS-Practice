@@ -7,12 +7,6 @@ import { useSearchParams } from 'next/navigation'
 
 function NavBar() {
 
-  const searchParams = useSearchParams()
-  const page = searchParams.get("page")
-  const category = searchParams.get("category")
-  console.log(searchParams, page, category)
-
-
   return (
     <header className="w-full bg-white sticky top-0 z-50 shadow-sm">
       {/* Top row */}
@@ -57,25 +51,16 @@ function NavBar() {
       <nav className="border-t border-[#E5E5E5] px-8">
         <ul className="flex gap-8 py-3 text-sm justify-center">
           <li className="cursor-pointer text-[#111111] hover:text-[#6C6C6C] font-semibold">
-            <Link href="/women">Women</Link>
+            <Link href="/women">Electronics</Link>
           </li>
           <li className="cursor-pointer text-[#111111] hover:text-[#6C6C6C] font-semibold">
-            <Link href="/men">Men</Link>
+            <Link href="/men">Furniture</Link>
           </li>
           <li className="cursor-pointer text-[#111111] hover:text-[#6C6C6C] font-semibold">
-            <Link href="/kids">Kids</Link>
+            <Link href="/kids">Fashion & Beauty</Link>
           </li>
           <li className="cursor-pointer text-[#111111] hover:text-[#6C6C6C] font-semibold">
-            <Link href="/sports">Sports</Link>
-          </li>
-          <li className="cursor-pointer text-[#111111] hover:text-[#6C6C6C] font-semibold">
-            <Link href="/brands">Brands</Link>
-          </li>
-          <li className="cursor-pointer text-[#111111] hover:text-[#6C6C6C] font-semibold">
-            <Link href="/new">New</Link>
-          </li>
-          <li className="cursor-pointer text-[#E63946] font-semibold">
-            <Link href="/sale">Sale</Link>
+            <Link href="/sports">Sports & Hobbies</Link>
           </li>
         </ul>
       </nav>

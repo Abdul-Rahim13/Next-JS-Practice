@@ -1,10 +1,10 @@
-"use client"
+"use client"                           
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
-export default function swiper() {
+export default function SwiperSlider() {  
   const images = [
     '/assets/clark-street.jpg',
     '/assets/hanson.jpg',
@@ -38,8 +38,8 @@ export default function swiper() {
             <SwiperSlide key={i}>
               <img
                 src={img}
-                className="h-full w-full object-cover bg-white"
                 alt=""
+                className="h-full w-full object-cover bg-white"
               />
             </SwiperSlide>
           ))}
