@@ -1,9 +1,18 @@
+"use client"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 
 function NavBar() {
+
+  const searchParams = useSearchParams()
+  const page = searchParams.get("page")
+  const category = searchParams.get("category")
+  console.log(searchParams, page, category)
+
+
   return (
     <header className="w-full bg-white sticky top-0 z-50 shadow-sm">
       {/* Top row */}
