@@ -1,7 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import LoadingAnimation from "../loadingAnimation";
 
 export default function BrandsPage() {
+  const [loading, setLoading] = useState(true)
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -20,14 +22,29 @@ export default function BrandsPage() {
     fetchProducts();
   }, []);
 
+  useEffect(()=>{
+    const timer = setTimeout(()=>{
+      setLoading(false)
+    }, 2000)
+    return () => clearTimeout(timer)
+  },[])
+
   return (
     <div className="w-full bg-[#FAFAFA] py-10">
       <div className="mx-auto w-[90%] max-w-6xl">
-        <h2 className="text-2xl font-extrabold text-[#111111] mb-6">
-          Furniture
-        </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        {
+          loading ? (
+            <div className="h-[600px] flex justify-center items-center">
+              <LoadingAnimation />
+            </div>
+
+          ) : (
+            <>
+            <h2 className="text-2xl font-extrabold text-[#111111] mb-6">
+                Furniture
+              </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {categories.map((item, i) => (
             <div
               key={i}
@@ -52,6 +69,9 @@ export default function BrandsPage() {
             </div>
           ))}
         </div>
+            </>
+          )
+        }
       </div>
     </div>
   );
