@@ -8,7 +8,7 @@ export default function BrandsPage() {
     const fetchProducts = async () => {
       try {
         const res = await fetch(
-          "https://fa.magma3c.com/category/getAllCategories?category=ElecTronics"
+          "https://fa.magma3c.com/category/getAllCategories?category=home"
         );
         const data = await res.json();
         setCategories(data.data.subCategory || []);
@@ -24,7 +24,7 @@ export default function BrandsPage() {
     <div className="w-full bg-[#FAFAFA] py-10">
       <div className="mx-auto w-[90%] max-w-6xl">
         <h2 className="text-2xl font-extrabold text-[#111111] mb-6">
-          Electronics
+          Home Appliances
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">

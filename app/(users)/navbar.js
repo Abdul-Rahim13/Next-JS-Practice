@@ -13,8 +13,8 @@ function NavBar() {
       <div className="flex items-center justify-between px-8 py-4">
         {/* Logo */}
         <div className="flex items-center gap-1">
-          <h1 className="text-2xl font-extrabold tracking-tight text-[#111111]">BR.</h1>
-          <h1 className="text-2xl font-extrabold tracking-tight text-[#D8D7C3]">F</h1>
+          <h1 className="text-2xl font-extrabold tracking-tight text-[#111111]">Trend</h1>
+          <h1 className="text-2xl font-extrabold tracking-tight text-[#AAA990]">Hub</h1>
         </div>
 
         {/* Search Bar */}
@@ -51,16 +51,16 @@ function NavBar() {
       <nav className="border-t border-[#E5E5E5] px-8">
         <ul className="flex gap-8 py-3 text-sm justify-center">
           <li className="cursor-pointer text-[#111111] hover:text-[#6C6C6C] font-semibold">
-            <Link href="/women">Electronics</Link>
+            <Link href="/Electronics">Electronics</Link>
           </li>
           <li className="cursor-pointer text-[#111111] hover:text-[#6C6C6C] font-semibold">
-            <Link href="/men">Furniture</Link>
+            <Link href="/Furniture">Furniture</Link>
           </li>
           <li className="cursor-pointer text-[#111111] hover:text-[#6C6C6C] font-semibold">
-            <Link href="/kids">Fashion & Beauty</Link>
+            <Link href="/Fashion">Fashion & Beauty</Link>
           </li>
           <li className="cursor-pointer text-[#111111] hover:text-[#6C6C6C] font-semibold">
-            <Link href="/sports">Sports & Hobbies</Link>
+            <Link href="/Home-Appliances">Home Appliances</Link>
           </li>
         </ul>
       </nav>

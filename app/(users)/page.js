@@ -1,23 +1,31 @@
 "use client";
+import Link from "next/link";
 
 export default function Home() {
-  // Just hardcode or pass your own items here
   const categories = [
     {
       categoryName: "Electronics",
-      imageUrl: "https://res.cloudinary.com/di9vpom9l/image/upload/v1756285887/qwiue036y1mc2wjndqpo.jpg",
+      imageUrl:
+        "https://res.cloudinary.com/di9vpom9l/image/upload/v1756285887/qwiue036y1mc2wjndqpo.jpg",
+        href: "/Electronics", 
     },
     {
       categoryName: "Furniture",
-      imageUrl: "https://res.cloudinary.com/di9vpom9l/image/upload/v1756286325/azfipvp6pxehdjrdv4bq.jpg",
+      imageUrl:
+        "https://res.cloudinary.com/di9vpom9l/image/upload/v1756286325/azfipvp6pxehdjrdv4bq.jpg",
+      href: "/Furniture",
     },
     {
       categoryName: "Fashion",
-      imageUrl: "https://res.cloudinary.com/di9vpom9l/image/upload/v1756287250/ey77rowioazopbbthqif.jpg",
+      imageUrl:
+        "https://res.cloudinary.com/di9vpom9l/image/upload/v1756287250/ey77rowioazopbbthqif.jpg",
+      href: "/Fashion",
     },
     {
       categoryName: "Home Appliances",
-      imageUrl: "https://res.cloudinary.com/di9vpom9l/image/upload/v1756286325/azfipvp6pxehdjrdv4bq.jpg",
+      imageUrl:
+        "https://res.cloudinary.com/di9vpom9l/image/upload/v1756286325/azfipvp6pxehdjrdv4bq.jpg",
+      href: "/Home-Appliances",
     },
   ];
 
@@ -30,27 +38,28 @@ export default function Home() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {categories.map((item, i) => (
-            <div
-              key={i}
-              className="group bg-[#F3F2ED] hover:bg-white border border-[#E5E5E5] 
-              hover:shadow-lg transition rounded-xl overflow-hidden"
-            >
-              <img
-                src={item.imageUrl}
-                alt={item.categoryName}
-                className="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="p-4">
-                <h3 className="text-lg font-semibold text-[#111111] text-center">
-                  {item.categoryName}
-                </h3>
-                <div className="mt-2 flex justify-center">
-                  <button className="px-4 py-1.5 rounded-full bg-[#FEC84B] text-[#111111] text-sm font-semibold hover:bg-[#e0b33f] transition">
-                    View More
-                  </button>
+            <Link key={i} href={item.href} className="group">
+              <div
+                className="bg-[#F3F2ED] hover:bg-white border border-[#E5E5E5] 
+                hover:shadow-lg transition rounded-xl overflow-hidden"
+              >
+                <img
+                  src={item.imageUrl}
+                  alt={item.categoryName}
+                  className="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-[#111111] text-center">
+                    {item.categoryName}
+                  </h3>
+                  <div className="mt-2 flex justify-center">
+                    <span className="px-4 py-1.5 rounded-full bg-[#FEC84B] text-[#111111] text-sm font-semibold">
+                      View More
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
