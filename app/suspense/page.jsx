@@ -5,7 +5,6 @@ import LoadingAnimation from '../(users)/LoadingAnimation'
 export default function MyPage() {
   return (
     <div className="min-h-screen grid grid-cols-2 gap-3">
-
       <div className="flex justify-center items-center bg-gray-100">
         <p className="max-w-md text-center">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
