@@ -2,14 +2,14 @@
 
 import { Home, ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";  //  next/navigation for app router and if in pages then next/router
 
 export default function NotFoundPage() {
   const router = useRouter();
   return (
     <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
       <div className="max-w-lg w-full text-center">
-        {/* Animated 404 */}
+
         <div className="mb-8">
           <h1 className="text-8xl md:text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 animate-pulse">
             404
@@ -17,7 +17,6 @@ export default function NotFoundPage() {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto mt-4 rounded-full"></div>
         </div>
 
-        {/* Error Message */}
         <div className="mb-12">
           <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
             Page Not Found
@@ -28,7 +27,6 @@ export default function NotFoundPage() {
           </p>
         </div>
 
-        {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button className="group flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
             <Home size={20} />
@@ -46,7 +44,6 @@ export default function NotFoundPage() {
           </button>
         </div>
 
-        {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
           <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-purple-400 rounded-full animate-pulse"></div>
