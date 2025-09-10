@@ -18,5 +18,3 @@ async function connectMongo() {
 }
 
 export default connectMongo;
-
-//finalize the next js 
