@@ -10,7 +10,7 @@ export default function BrandsPage() {
     const fetchProducts = async () => {
       try {
         const res = await fetch(
-          "https://fa.magma3c.com/category/getAllCategories?category=Electronics"
+          "https://fa.magma3c.com/category/getAllCategories?category=Fashion"
         );
         const data = await res.json();
         setCategories(data.data.subCategory || []);
