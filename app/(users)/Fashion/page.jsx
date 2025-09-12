@@ -10,7 +10,7 @@ export default function BrandsPage() {
     const fetchProducts = async () => {
       try {
         const res = await fetch(
-          "https://fa.magma3c.com/category/getAllCategories?category=Fashion"
+          "https://fa.magma3c.com/category/getAllCategories?category=Electronics"
         );
         const data = await res.json();
         setCategories(data.data.subCategory || []);
@@ -21,7 +21,7 @@ export default function BrandsPage() {
 
     fetchProducts();
   }, []);
-  
+
   useEffect(() =>{
       const timer = setTimeout(() => {
         setLoading(false)
