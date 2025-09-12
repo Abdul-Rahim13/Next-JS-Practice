@@ -21,7 +21,7 @@ export default function BrandsPage() {
 
     fetchProducts();
   }, []);
-
+  
   useEffect(() =>{
       const timer = setTimeout(() => {
         setLoading(false)
